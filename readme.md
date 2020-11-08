@@ -15,9 +15,26 @@ In any case, the direct material impact of the bug itself once 01.01.2000 hit wa
 Finally, there is a new horizon approaching that will result in a similar requirement to upgrade, namely the so-called Y2038 Bug. The UNIX timestamp, a standard format for representing dates as seconds passed since 01.01.1970 (The UNIX epoch), and a notably forward-looking design for the time that eschewed the issues with the Y2K bug, is implemented on many systems as a signed 32-bit integer. In 2038, any systems storing it as such will overflow, causing a reset to a very large negative number, whose interpretation will vary by system but will surely cause great disruption if allowed to unfold.
 
 ## Dev environment setup
-TODO
+### Prerequisites
+ - Visual Studio Code with C/C++ extensions installed
+ - MinGW and GCC installed
+
+### Installing Pthread libraries
+ - Access MinGW Installation manager
+ - Mark `mingw-32-pthread-w32-dev` for installation
+ - Install marked libraries. Note that MinGW Installation manager will install any dependencies as well
+ ![Install pthread for Windows](./resources/Threads1.PNG)
+
+### Create VS Code launch config
+ - Create a `.vscode` launch config for current project in VS Code (not needed if you clone this repo)
+ - Update paths to debugger and compiler in `launch.json` and `tasks.json` if you have MinGW or GCC installed in places other than the default (only needed if you clone this repo)
+ - Add the `-l pthread` flag to the GCC options in `launch.json` so it knows to link this library (not needed if you clone this repo)
+ ![Add flag](./resources/Threads2.PNG)
+
+Done! It should now be runnable and debuggable on your local machine.
 
 # References
+The Y2K Bug, *Encyclopedia Britannica*, retrieved on 08.11.2020 (https://www.britannica.com/technology/Y2K-bug)
 
 ## Author
 Erik Kovacs (kovaroberik@gmail.com)
