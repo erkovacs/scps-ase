@@ -1,8 +1,8 @@
 # Source Code Security project
 
 ## Intro
-> Premature optimization is the root of all evil.
-attributed to Donald Knuth
+>> Premature optimization is the root of all evil.
+> attributed to Donald Knuth
 
 This project is meant to simulate a possible effect of the Y2K bug that caused a lot of anxiety and panic at the end of the 20th century and forced many companies and governments to upgrade billions worth of equipment and software.
 
