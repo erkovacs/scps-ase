@@ -31,6 +31,7 @@ Finally, there is a new horizon approaching that will result in a similar requir
  - Create a `.vscode` launch config for current project in VS Code (not needed if you clone this repo)
  - Update paths to debugger and compiler in `launch.json` and `tasks.json` if you have MinGW or GCC installed in places other than the default (only needed if you clone this repo)
  - Add the `-l pthread` flag to the GCC options in `launch.json` so it knows to link this library (not needed if you clone this repo)
+ 
  ![Add flag](./resources/Threads2.PNG)
 
 Done! It should now be runnable and debuggable on your local machine.
